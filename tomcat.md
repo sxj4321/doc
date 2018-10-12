@@ -29,7 +29,6 @@ http://127.0.0.1:8080/test?a=1&b=2
 | protocol | 设置连接器 处理类。现在tomcat提供4种连接器:org.apache.coyote.http11.Http11Protocol - 阻塞的的Java连接器org.apache.coyote.http11.Http11NioProtocol - 非阻塞的的Java NIO连接器；org.apache.coyote.http11.Http11Nio2Protocol - 非阻塞的的Java NIO2连接器；org.apache.coyote.http11.Http11AprProtocol - 本地连接器也可以使用自定义实现的连接器。注意: 如果配置的是默认的HTTP/1.1，将自动配置一个 非阻塞的java NIO连接器 或 APR/native(本地连接器)。 如果环境变量(window path 和 LD_LIBRARY_PATH unix\linux)含有tomcat本地库，将使用APR/native连接器。 如果环境变量不存在将使用 非阻塞的java NIO连接器。 APR/native连接器 和 非阻塞的java NIO连接器 配置参数是不一样的。建议: 在生产环境中配置一个固定的连接器，不使用自动配置。看看我们的连接器比较图表。 Java连接器的配置是相同的,http和https。有关APR 连接器的更多信息和APR 具体的SSL设置APR 请访问文档 |
 | redirectPort | 配置指定端口来 ssl连接，一般默认配置是8443，但是浏览器默认的是443端口请求ssl服务器，所以在https 下将8443改为443.|
 | URIEncoding | 配置URI使用的字符编码，来解码?之前的字符串。 一般情况下默认使用utf-8，在org.apache.catalina.STRICT_SERVLET_COMPLIANCE(系统属性)为true的情况下使用 ISO-8859-1。|
-| URIEncoding | 配置URI使用的字符编码，来解码?之前的字符串。 一般情况下默认使用utf-8，在org.apache.catalina.STRICT_SERVLET_COMPLIANCE(系统属性)为true的情况下使用 ISO-8859-1。|
 
 ##### 标准属性
 标准的HTTP连接器(BIO、NIO NIO2和APR/native)都支持以下属性除了常见的连接器上面列出的属性。
